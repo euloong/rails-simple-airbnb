@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>All our flats</h1>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-sm-4 col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.royal.uk/sites/default/files/images/feature/buckingham-palace.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= flat.name %>
+          </h5>
+          <p class="card-text">
+            <%= flat.address %>
+          </p>
+          <div class="card-guests">
+            <i class="fas fa-user-friends"></i>
+            <%= flat.number_of_guests %>
+          </div>
+          <div class="card-price">
+            <i class="fas fa-dollar-sign"></i>
+            <%= flat.price_per_night %>
+          </div>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <%= link_to "Add a flat", new_flat_path %>
+  </div>
