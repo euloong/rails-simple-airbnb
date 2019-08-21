@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_22_053605) do
+ActiveRecord::Schema.define(version: 2019_08_21_071637) do
 
   create_table "flats", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_05_22_053605) do
     t.integer "number_of_guests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture_url"
   end
 
 end
